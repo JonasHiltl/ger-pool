@@ -34,9 +34,19 @@ export default function Home() {
         <Heading color='blue.900' >GER Pool</Heading>
         <Spacer />
         <HStack spacing='4px'>
-          <Image src='/vereinigtes-konigreich.png' boxSize="18px"></Image>
+          <Image 
+            src='/vereinigtes-konigreich.png' 
+            boxSize="18px"
+            opacity= {locale === 'de' ? '0.4' : '1'}
+            filter={locale === 'de' ? 'grayscale(100%)' : 'grayscale(0%)'}
+            />
           <Switch size="sm" onChange={handleLanguageToggle}/>
-          <Image src='deutschland.png' boxSize="18px"></Image>
+          <Image 
+            src='deutschland.png' 
+            boxSize="18px"
+            opacity= {locale === 'en' ? '0.4' : '1'}
+            filter={locale === 'en' ? 'grayscale(100%)' : 'grayscale(0%)'}
+            />
         </HStack>
         Test
       </Flex>
