@@ -31,7 +31,8 @@ export default function Home() {
   return (
     <Box pos='relative' height='100vh'>
       <Flex px={[ 5, 6, 32 ]} py={[ 6, 6 ]} alignItems='center'>
-        <Heading color='blue.900' >GER Pool</Heading>
+        <Image src='Logo.svg'w='60px'/>
+        <Heading color='blue.900' ml={[ 2, 4, 6 ]}>GER Pool</Heading>
         <Spacer />
         <HStack spacing='4px'>
           <Image 
@@ -48,7 +49,6 @@ export default function Home() {
             filter={locale === 'en' ? 'grayscale(100%)' : 'grayscale(0%)'}
             />
         </HStack>
-        Test
       </Flex>
       <Grid position='absolute' top='50%' right={[ 5, 6, 32 ]} h='200px' transform='translateY(-50%)'>
         <Link>
@@ -65,7 +65,7 @@ export default function Home() {
       </Grid>
       <Box px={[ 5, 6, 32 ]} minHeight='90vh'>
         <Box mt='auto'>
-          <Heading>{l.test}</Heading>
+          <Heading mb='10px'>{l.h1Network}</Heading>
           <Flex>
             <VStack spacing='3px'>
               <Circle bg='gray.700' w='7px' h='7px'/>
@@ -78,8 +78,8 @@ export default function Home() {
             </VStack>
             <VStack alignItems='left' spacing='auto' ml='20px' maxWidth={['400px']}>
               <Box>
-                <Text fontSize="sm" mb='5px'>Many Stake Pools are hosted on AWS, Microsoft or Google cloud infrastructures and therefor controlled by these entities.</Text>
-                <Text fontSize="sm">We aim to keep decentralizing the Cardano ecosystem by running our node on a powerful Raspberry Pi network.</Text>
+                <Text fontSize="sm" mb='5px'>{l.pText1}</Text>
+                <Text fontSize="sm">{l.pText2}</Text>
               </Box>
               <Box pb='7px'>
                 <Text fontSize="sm"></Text>
@@ -91,7 +91,7 @@ export default function Home() {
       <Center p={[ 6, 8, 10, 14 ]}>
         <Grid textAlign='center'>
           <Text fontSize="md" fontWeight="semibold" mb={[5, 8]}>Stay Connected </Text>
-          <Text fontSize="md" mb={1} opacity='0.75'>Hamburg, GER</Text>
+          <Text fontSize="md" mb={1} opacity='0.75'>Hamburg, DE</Text>
           <Text fontSize="2xl"  mb={1}>jonashiltl@gmx.net</Text>
         </Grid>
       </Center>
