@@ -29,10 +29,10 @@ export default function Home() {
   }
 
   return (
-    <Box pos='relative' height='100vh'>
-      <Flex px={[ 5, 6, 32 ]} py={[ 6, 6 ]} alignItems='center'>
-        <Image src='Logo.svg'w='60px'/>
-        <Heading color='blue.900' ml={[ 2, 4, 6 ]}>GER Pool</Heading>
+    <Box pos='relative' h='100vh'>
+      <Flex px={[ 5, 6, 16, 32 ]} py={[ 6, 6 ]} alignItems='center'>
+        {/* <Image src='Logo.svg'w='60px' mr={[ 2, 4, 6 ]} /> */}
+        <Heading color='gray.900'>GER Pool</Heading>
         <Spacer />
         <HStack spacing='4px'>
           <Image 
@@ -41,16 +41,16 @@ export default function Home() {
             opacity= {locale === 'de' ? '0.4' : '1'}
             filter={locale === 'de' ? 'grayscale(100%)' : 'grayscale(0%)'}
             />
-          <Switch size="sm" onChange={handleLanguageToggle}/>
+          <Switch size="sm" isChecked={locale === 'de'} onChange={handleLanguageToggle}/>
           <Image 
-            src='deutschland.png' 
+            src='deutschland.png'
             boxSize="18px"
             opacity= {locale === 'en' ? '0.4' : '1'}
             filter={locale === 'en' ? 'grayscale(100%)' : 'grayscale(0%)'}
             />
         </HStack>
       </Flex>
-      <Grid position='absolute' top='50%' right={[ 5, 6, 32 ]} h='200px' transform='translateY(-50%)'>
+      <Grid position='absolute' top='50%' right={[ 5, 6, 16, 32 ]} h='200px' transform='translateY(-50%)' display={[ 'none', 'none', 'none', 'grid']}>
         <Link>
           <Icon as={FiTwitter} color='gray.700' w={8} h={8}/>
         </Link>
@@ -63,7 +63,7 @@ export default function Home() {
         <Icon as={FiGithub} color='gray.700' w={8} h={8}/>
         </Link>
       </Grid>
-      <Box px={[ 5, 6, 32 ]} minHeight='90vh'>
+      <Box px={[ 5, 6, 16, 32 ]} minHeight='90vh'>
         <Box mt='auto'>
           <Heading mb='10px'>{l.h1Network}</Heading>
           <Flex>
@@ -78,7 +78,7 @@ export default function Home() {
             </VStack>
             <VStack alignItems='left' spacing='auto' ml='20px' maxWidth={['400px']}>
               <Box>
-                <Text fontSize="sm" mb='5px'>{l.pText1}</Text>
+                <Text fontSize="sm" mb='7px'>{l.pText1}</Text>
                 <Text fontSize="sm">{l.pText2}</Text>
               </Box>
               <Box pb='7px'>
@@ -88,13 +88,31 @@ export default function Home() {
           </Flex>
         </Box>
       </Box>
-      <Center p={[ 6, 8, 10, 14 ]}>
-        <Grid textAlign='center'>
-          <Text fontSize="md" fontWeight="semibold" mb={[5, 8]}>Stay Connected </Text>
-          <Text fontSize="md" mb={1} opacity='0.75'>Hamburg, DE</Text>
-          <Text fontSize="2xl"  mb={1}>jonashiltl@gmx.net</Text>
-        </Grid>
-      </Center>
+      <Box bgImage="url('/bg.svg')" h={[ '500px' ,'704px']} bgPosition='center' bgRepeat='no-repeat' bgSize='cover' position='relative'>
+        <Box position='absolute' top='50%' left='50%' transform='translate(-50%, -50%)' w='100%' p={[ 5, 6, 16, 32 ]}>
+          <Box h='1px' backgroundColor='gray.50' opacity='0.2' mb='20px'/>
+          <Flex justifyContent='space-between'>
+            <Box>
+              <Text fontSize="sm" color='gray.50' opacity='0.5'>Have any question?</Text>
+              <Text fontSize="sm" color='gray.50'>jonashiltl@gmx.net</Text>
+            </Box>
+            <Flex direction={['column', 'column', 'column', 'column']}>
+              <Text fontSize="sm" color='gray.50'  opacity='0.5' mr={[0, 0, 1]}>Get more information:</Text>
+              <Flex>
+                <Link ml='auto' mr='0px'>
+                  <Icon as={FiTwitter} color='gray.50' w={4}/>
+                </Link>
+                <Link ml={1} mr='0px'>
+                  <Icon as={FaTelegramPlane} color='gray.50' w={4}/>
+                </Link>
+                <Link ml={1} mr='0px'>
+                  <Icon as={FiGithub} color='gray.50' w={4} />
+                </Link>
+              </Flex>
+            </Flex>
+          </Flex>
+        </Box>
+      </Box>
     </Box>
   )
 }
