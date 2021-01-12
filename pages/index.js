@@ -1,4 +1,4 @@
-import { IconButton, useDisclosure, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Wrap, WrapItem, Button, Flex, Icon, Heading, Text, Center, Spacer, Grid, Box, Link, Circle, Switch, VStack, HStack, Image, Accordion, AccordionButton, AccordionItem, AccordionPanel, AccordionIcon, useMediaQuery } from "@chakra-ui/react";
+import { IconButton, useDisclosure, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Wrap, WrapItem, Button, Flex, Icon, Heading, Text, Center, Spacer, Grid, Box, Link, Circle, Switch, VStack, HStack, Image, Accordion, AccordionButton, AccordionItem, AccordionPanel, AccordionIcon, useMediaQuery, flexboxParser } from "@chakra-ui/react";
 import { useRouter } from 'next/router';
 import { en, de } from '../translations'
 
@@ -86,7 +86,7 @@ export default function Home() {
           </ModalContent>
         </Modal>
       </Flex>
-      <Grid position='absolute' top='50%' right={[ 5, 6, 16, 32 ]} h='200px' transform='translateY(-50%)' display={[ 'none', 'none', 'none', 'grid']}>
+      <Grid position='absolute' top='50%' left={[ 5, 6, 16, 32 ]} h='200px' transform='translateY(-50%)' display={[ 'none', 'none', 'none', 'grid']}>
         <Link>
           <Icon as={FiTwitter} color='gray.700' w={8} h={8}/>
         </Link>
@@ -99,9 +99,9 @@ export default function Home() {
         <Icon as={FiGithub} color='gray.700' w={8} h={8}/>
         </Link>
       </Grid>
-      <Flex px={[ 5, 6, 16, 32 ]} pb='50px' h='calc(100vh - 96px)'>
-        <Box mt='auto'>
-          <Heading mb='10px'>{l.h1Network}</Heading>
+      <Flex px={[ 5, 6, 16, 32 ]} pb={['10px', '10px', '30px', '50px']} h='calc(100vh - 96px)' flexDirection={[ 'column-reverse', 'column-reverse', 'column-reverse', 'row' ]} justifyContent='space-around'>
+        <Box mt={[ '0px', '0px', '0px', 'auto']} maxWidth={['90%', '90%', '300px', '400px']}>
+          <Heading mb='10px' size="lg" >{l.h1Network}</Heading>
           <Flex>
             <VStack spacing='3px'>
               <Circle bg='gray.700' w='7px' h='7px'/>
@@ -112,7 +112,7 @@ export default function Home() {
                 <Circle bg='gray.700' w='7px' h='7px'/>
               </Circle>
             </VStack>
-            <VStack alignItems='left' spacing='auto' ml='20px' maxWidth={['400px']}>
+            <VStack alignItems='left' spacing='auto' ml='20px'>
               <Box>
                 <Text fontSize="sm" mb='7px'>{l.pText1}</Text>
                 <Text fontSize="sm">{l.pText2}</Text>
@@ -123,7 +123,7 @@ export default function Home() {
             </VStack>
           </Flex>
         </Box>
-        <Image src='hero.svg' zIndex='-1' h='750px'/>
+        <Image src='hero.svg' zIndex='-1' maxWidth={['100%', '90%', '90%', 'calc( 100% - 450px)']} mr={[ 'auto', 'auto', 'auto','0px']} ml='auto' />
       </Flex>
       <Wrap maxW='900px' w='90%' mx='auto' justifyContent='space-between' textAlign='center'>
         <WrapItem w={[ '100%', '100%', '30%']} justifyContent='center'>
