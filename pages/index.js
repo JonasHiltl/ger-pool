@@ -94,20 +94,20 @@ export default function Home() {
         <WrapItem w={[ '100%', '100%', '30%']} justifyContent='center'>
           <Box textAlign='center'>
             <Image w={[ 36, 36, 36 ]} mx='auto' my={3} src='decentralized.svg' alignItems='center'/>
-            <Heading size="xl" my={3}>Test</Heading>
+            <Heading size="lg" my={3}>Test</Heading>
             <Text my={3} fontSize="sm" opacity='0.6'>Operating an environment-friendly 5 Watt stakepool 24/7 with 99.9% uptime</Text>
           </Box>
         </WrapItem >
         <WrapItem w={[ '100%', '100%', '30%']} justifyContent='center'>
           <Box textAlign='center'>
             <Image w={[ 36, 36, 36 ]} mx='auto' my={3} src='support.svg' alignItems='center'/>
-            <Heading size="xl" my={3}>24/7 Support</Heading>
+            <Heading size="lg" my={3}>Personal communication</Heading>
             <Text my={3} fontSize="sm" opacity='0.6'>Highly reliable because of very good Internet connection in order to get all my slots</Text>
           </Box>
         </WrapItem>
         <WrapItem w={[ '100%', '100%', '30%']} justifyContent='center'>
           <Box textAlign='center'>
-            <Heading size="xl">Test</Heading>
+            <Heading size="lg">Test</Heading>
             <Text fontSize="sm" opacity='0.6'>Running my stakepool from home, helping to truly decentralize the Cardano ecosystem</Text>
           </Box>
         </WrapItem>
