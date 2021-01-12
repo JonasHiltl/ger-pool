@@ -1,4 +1,4 @@
-import { Wrap, WrapItem, Button, Flex, Icon, Heading, Text, Center, Spacer, Grid, Box, Link, Circle, Switch, VStack, HStack, Image, Accordion, AccordionButton, AccordionItem, AccordionPanel, AccordionIcon, useMediaQuery } from "@chakra-ui/react";
+import { IconButton, useDisclosure, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Wrap, WrapItem, Button, Flex, Icon, Heading, Text, Center, Spacer, Grid, Box, Link, Circle, Switch, VStack, HStack, Image, Accordion, AccordionButton, AccordionItem, AccordionPanel, AccordionIcon, useMediaQuery } from "@chakra-ui/react";
 import { useRouter } from 'next/router';
 import { en, de } from '../translations'
 
@@ -12,9 +12,10 @@ import { FaTelegramPlane } from 'react-icons/fa';
 //992px upwards
 
 export default function Home() {
-  const router = useRouter();
-  const { locale } = router;
-  const [isLargerThan768] = useMediaQuery("(min-width: 768px)");
+  const router = useRouter()
+  const { locale } = router
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const [isLargerThan768] = useMediaQuery("(min-width: 768px)")
 
   const l = locale === 'en' ? en : de;
 
@@ -50,7 +51,40 @@ export default function Home() {
             filter={locale === 'en' ? 'grayscale(100%)' : 'grayscale(0%)'}
             />
         </HStack>
-        <Button ml='10px' borderColor="#01de86ff" border="2px" variant="outline">Delegate</Button>
+        <Button onClick={onOpen} ml='10px' borderColor="#01de86ff" border="2px" variant="outline">{l.h1ButtonAction}</Button>
+        <Modal
+          isCentered
+          onClose={onClose}
+          isOpen={isOpen}
+          motionPreset="slideInBottom"
+        >
+          <ModalOverlay />
+          <ModalContent w={['95%', '95%', '100%']}>
+            <ModalHeader>{l.h1Modal}</ModalHeader>
+            <ModalCloseButton/>
+            <ModalBody >
+              <VStack>
+                <Box>
+                  <Text mb='10px' fontSize="sm" textAlign='center'>{l.pModal1}</Text>
+                  <Flex my='10px' mx='auto' justifyContent='space-between' w='210px'>
+                    <Link p='3px' border="1px" borderRadius="5px" borderColor="#82ff65ff" href='https://daedaluswallet.io/' target="_blank">
+                      <Image boxSize={[ '70px', '80px', '80px' ]} src='/daedalus-logo.svg' alt="Yoroi Wallet Logo"/>
+                    </Link>
+                    <Link p='3px' border="1px" borderRadius="5px" borderColor="#3353e0ff" href='https://yoroi-wallet.com/' target="_blank">
+                      <Image boxSize={[ '70px', '80px', '80px' ]} src='/yoroi-logo.svg' alt="Yoroi Wallet Logo"/>
+                    </Link>
+                  </Flex>
+                  <Text my='10px' fontSize="sm" textAlign='center'>{l.pModal2}</Text>
+                </Box>
+              </VStack>
+            </ModalBody>
+            <ModalFooter>
+              <Button variant='outline' borderColor="#01de86ff" border="2px" mr={3} onClick={onClose}>
+                {l.h1ModalClose}
+              </Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
       </Flex>
       <Grid position='absolute' top='50%' right={[ 5, 6, 16, 32 ]} h='200px' transform='translateY(-50%)' display={[ 'none', 'none', 'none', 'grid']}>
         <Link>
@@ -65,7 +99,7 @@ export default function Home() {
         <Icon as={FiGithub} color='gray.700' w={8} h={8}/>
         </Link>
       </Grid>
-      <Box px={[ 5, 6, 16, 32 ]} minHeight='50vh'>
+      <Flex px={[ 5, 6, 16, 32 ]} pb='50px' h='calc(100vh - 96px)'>
         <Box mt='auto'>
           <Heading mb='10px'>{l.h1Network}</Heading>
           <Flex>
@@ -74,7 +108,7 @@ export default function Home() {
               <Box bg='gray.300' height='45px' w='3px'/>
               <Circle bg='gray.700' w='7px' h='7px'/>
               <Box bg='gray.300' height='45px' w='3px'/>
-              <Circle border='2px solid' color='gray.500' w='30px' h='30px'>
+              <Circle border='2px solid' color='#01de86ff' w='30px' h='30px'>
                 <Circle bg='gray.700' w='7px' h='7px'/>
               </Circle>
             </VStack>
@@ -89,7 +123,8 @@ export default function Home() {
             </VStack>
           </Flex>
         </Box>
-      </Box>
+        <Image src='hero.svg' zIndex='-1' h='750px'/>
+      </Flex>
       <Wrap maxW='900px' w='90%' mx='auto' justifyContent='space-between' textAlign='center'>
         <WrapItem w={[ '100%', '100%', '30%']} justifyContent='center'>
           <Box textAlign='center'>
@@ -101,7 +136,7 @@ export default function Home() {
         <WrapItem w={[ '100%', '100%', '30%']} justifyContent='center'>
           <Box textAlign='center'>
             <Image w={[ 36, 36, 36 ]} mx='auto' my={3} src='support.svg' alignItems='center'/>
-            <Heading size="lg" my={3}>Personal communication</Heading>
+            <Heading size="lg" my={3}>24/7 support</Heading>
             <Text my={3} fontSize="sm" opacity='0.6'>Highly reliable because of very good Internet connection in order to get all my slots</Text>
           </Box>
         </WrapItem>
