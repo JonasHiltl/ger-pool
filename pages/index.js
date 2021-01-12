@@ -1,4 +1,4 @@
-import { Wrap, WrapItem, Flex, Icon, Heading, Text, Center, Spacer, Grid, Box, Link, Circle, Switch, VStack, HStack, Image, Accordion, AccordionButton, AccordionItem, AccordionPanel, AccordionIcon } from "@chakra-ui/react";
+import { Wrap, WrapItem, Button, Flex, Icon, Heading, Text, Center, Spacer, Grid, Box, Link, Circle, Switch, VStack, HStack, Image, Accordion, AccordionButton, AccordionItem, AccordionPanel, AccordionIcon, useMediaQuery } from "@chakra-ui/react";
 import { useRouter } from 'next/router';
 import { en, de } from '../translations'
 
@@ -14,6 +14,7 @@ import { FaTelegramPlane } from 'react-icons/fa';
 export default function Home() {
   const router = useRouter();
   const { locale } = router;
+  const [isLargerThan768] = useMediaQuery("(min-width: 768px)");
 
   const l = locale === 'en' ? en : de;
 
@@ -32,7 +33,7 @@ export default function Home() {
     <Box pos='relative' h='100vh'>
       <Flex px={[ 5, 6, 16, 32 ]} py={[ 6, 6 ]} alignItems='center'>
         {/* <Image src='Logo.svg'w='60px' mr={[ 2, 4, 6 ]} /> */}
-        <Heading color='gray.900' size="2xl" >GER Pool</Heading>
+        <Heading color='gray.900' as="h1" size='2xl' >{isLargerThan768 ? 'GER Pool' : 'GER'}</Heading>
         <Spacer />
         <HStack spacing='4px'>
           <Image 
@@ -49,6 +50,7 @@ export default function Home() {
             filter={locale === 'en' ? 'grayscale(100%)' : 'grayscale(0%)'}
             />
         </HStack>
+        <Button ml='10px' borderColor="#01de86ff" border="2px" variant="outline">Delegate</Button>
       </Flex>
       <Grid position='absolute' top='50%' right={[ 5, 6, 16, 32 ]} h='200px' transform='translateY(-50%)' display={[ 'none', 'none', 'none', 'grid']}>
         <Link>
@@ -88,22 +90,22 @@ export default function Home() {
           </Flex>
         </Box>
       </Box>
-      <Wrap px={[ 5, 6, 32, '23%' ]} justifyContent='space-between'>
-        <WrapItem w={[ '100%', '100%', '30%']}>
+      <Wrap maxW='900px' w='90%' mx='auto' justifyContent='space-between' textAlign='center'>
+        <WrapItem w={[ '100%', '100%', '30%']} justifyContent='center'>
           <Box textAlign='center'>
             <Image w={[ 36, 36, 36 ]} mx='auto' my={3} src='decentralized.svg' alignItems='center'/>
             <Heading size="xl" my={3}>Test</Heading>
             <Text my={3} fontSize="sm" opacity='0.6'>Operating an environment-friendly 5 Watt stakepool 24/7 with 99.9% uptime</Text>
           </Box>
-        </WrapItem>
-        <WrapItem w={[ '100%', '100%', '30%']}>
+        </WrapItem >
+        <WrapItem w={[ '100%', '100%', '30%']} justifyContent='center'>
           <Box textAlign='center'>
             <Image w={[ 36, 36, 36 ]} mx='auto' my={3} src='support.svg' alignItems='center'/>
             <Heading size="xl" my={3}>24/7 Support</Heading>
             <Text my={3} fontSize="sm" opacity='0.6'>Highly reliable because of very good Internet connection in order to get all my slots</Text>
           </Box>
         </WrapItem>
-        <WrapItem w={[ '100%', '100%', '30%']}>
+        <WrapItem w={[ '100%', '100%', '30%']} justifyContent='center'>
           <Box textAlign='center'>
             <Heading size="xl">Test</Heading>
             <Text fontSize="sm" opacity='0.6'>Running my stakepool from home, helping to truly decentralize the Cardano ecosystem</Text>
@@ -112,7 +114,7 @@ export default function Home() {
         <WrapItem>
         </WrapItem>
       </Wrap>
-      <Accordion allowToggle px={[ 5, 6, 32, '23%' ]}>
+      <Accordion allowToggle maxW='900px' w='90%' mx='auto'>
         <AccordionItem>
           <AccordionButton>
             <Box flex="1" textAlign="left">
