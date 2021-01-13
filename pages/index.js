@@ -61,7 +61,7 @@ export default function Home() {
           <ModalOverlay />
           <ModalContent w={['95%', '95%', '100%']}>
             <ModalHeader>{l.h1Modal}</ModalHeader>
-            <ModalCloseButton/>
+              <ModalCloseButton right='10px' />
             <ModalBody >
               <VStack>
                 <Box>
