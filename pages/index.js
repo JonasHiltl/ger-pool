@@ -1,4 +1,4 @@
-import { IconButton, useDisclosure, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Wrap, WrapItem, Button, Flex, Icon, Heading, Text, Center, Spacer, Grid, Box, Link, Circle, Switch, VStack, HStack, Image, Accordion, AccordionButton, AccordionItem, AccordionPanel, AccordionIcon, useMediaQuery, flexboxParser } from "@chakra-ui/react";
+import { ListItem, OrderedList, useDisclosure, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Wrap, WrapItem, Button, Flex, Icon, Heading, Text, Center, Spacer, Grid, Box, Link, Circle, Switch, VStack, HStack, Image, Accordion, AccordionButton, AccordionItem, AccordionPanel, AccordionIcon, useMediaQuery, flexboxParser } from "@chakra-ui/react";
 import { useRouter } from 'next/router';
 import { en, de } from '../translations'
 
@@ -125,11 +125,11 @@ export default function Home() {
         </Box>
         <Image src='hero.svg' zIndex='-1' maxWidth={['100%', '90%', '90%', 'calc( 100% - 450px)']} mr={[ 'auto', 'auto', 'auto','0px']} ml='auto' />
       </Flex>
-      <Wrap maxW='900px' w='90%' mx='auto' justifyContent='space-between' textAlign='center'>
+      <Wrap maxW='900px' w='90%' my='50px' mx='auto' justifyContent='space-between' textAlign='center'>
         <WrapItem w={[ '100%', '100%', '30%']} justifyContent='center'>
           <Box textAlign='center'>
             <Image w={[ 36, 36, 40 ]} mx='auto' my={3} src='decentralized.svg' alignItems='center'/>
-            <Heading size="lg" my={3}>Test</Heading>
+            <Heading size="lg" my={3}>Decentralizing</Heading>
             <Text my={3} fontSize="sm" opacity='0.6'>Operating an environment-friendly 5 Watt stakepool 24/7 with 99.9% uptime</Text>
           </Box>
         </WrapItem >
@@ -150,33 +150,58 @@ export default function Home() {
         <WrapItem>
         </WrapItem>
       </Wrap>
-      <Accordion allowToggle maxW='900px' w='90%' mx='auto'>
+      <Accordion allowToggle maxW='900px' w='90%' mx='auto' my='50px'>
         <AccordionItem>
-          <AccordionButton>
-            <Box flex="1" textAlign="left">
-              Section 1 title
+          <AccordionButton py={[4 , 4 , 6]}>
+            <Box flex="1" textAlign="left" p='5px'>
+              <Text fontSize={['md', 'md', "lg"]}>How to stake from Yoroi Wallet?</Text>
             </Box>
             <AccordionIcon />
           </AccordionButton>
-          <AccordionPanel pb={4}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo consequat.
+          <AccordionPanel>
+            <OrderedList>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>Download the Yoroi Light Wallet at <Link color="#01de86ff" href='https://yoroi-wallet.com/' target='_blank'>yoroi-wallet.com</Link>.</ListItem>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>Choose your preferred browser option after clicking the download button.</ListItem>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>After adding it to your browser, launch the Yoroi Wallet extension within the browser.</ListItem>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>Simply follow the instructions to connect / create / restore your Cardano wallet.</ListItem>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>Make sure you have ADA in your wallet. You may fund your wallet by creating an address in the "Receive" tab.</ListItem>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>Go to the "Delegation List" tab, and search for "GER".</ListItem>
+            </OrderedList>
           </AccordionPanel>
         </AccordionItem>
         <AccordionItem>
-          <AccordionButton>
-            <Box flex="1" textAlign="left">
-              Section 2 title
+          <AccordionButton py={[4 , 4 , 6]}>
+            <Box flex="1" textAlign="left" p='5px'>
+              <Text fontSize={['md', 'md', "lg"]}>How to stake from Daedalus Wallet?</Text>
             </Box>
             <AccordionIcon />
           </AccordionButton>
-          <AccordionPanel pb={4}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo consequat.
+          <AccordionPanel>
+            <OrderedList>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>Download the Daedalus Wallet at  <Link color="#01de86ff" href='https://daedaluswallet.io/' target='_blank'>daedaluswallet.io</Link>.</ListItem>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>The first time launching the wallet, you will need to wait for Daedalus to sync with the blockchain.</ListItem>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>After Daedalus finished syncing, simply follow the instructions to create / restore your wallet.</ListItem>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>Make sure you have ADA in your wallet. You may fund your wallet by copying an address in the "Receive" tab.</ListItem>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>Click the second button in the left panel and select the "Stake Pools" tab.</ListItem>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>Search for "GER" and click the "Delegate to this pool" button.</ListItem>
+            </OrderedList>
+          </AccordionPanel>
+        </AccordionItem>
+        <AccordionItem>
+          <AccordionButton py={[4 , 4 , 6]}>
+            <Box flex="1" textAlign="left" p='5px'>
+              <Text fontSize={['md', 'md', "lg"]}>How to stake from mobile?</Text>
+            </Box>
+            <AccordionIcon />
+          </AccordionButton>
+          <AccordionPanel >
+            <OrderedList>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>Go and download the Yoroi mobile app for your device: <Link color="#01de86ff" href='https://play.google.com/store/apps/details?id=com.emurgo' target='_blank'>Android</Link> | <Link color="#01de86ff" href='https://apps.apple.com/app/id1447326389' target='_blank'>IOS</Link>.</ListItem>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>Launch the app and follow the instructions to connect / create / restore your Cardano wallet.</ListItem>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>Once set up, You may fund your wallet by creating an address in the "Receive" tab.</ListItem>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>Go to the "Dashboard" tab and click "Go to Staking Center".</ListItem>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>Search for "GER" and click the "Delegate" button.</ListItem>
+            </OrderedList>
           </AccordionPanel>
         </AccordionItem>
       </Accordion>
