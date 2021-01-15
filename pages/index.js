@@ -1,6 +1,8 @@
 import { ListItem, OrderedList, useDisclosure, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Wrap, WrapItem, Button, Flex, Icon, Heading, Text, Center, Spacer, Grid, Box, Link, Circle, Switch, VStack, HStack, Image, Accordion, AccordionButton, AccordionItem, AccordionPanel, AccordionIcon, useMediaQuery, flexboxParser } from "@chakra-ui/react";
+import { useEffect } from 'react'
+import Particles from 'react-particles-js';
 import { useRouter } from 'next/router';
-import { en, de } from '../translations'
+import { en, de } from '../translations';
 
 import { FiTwitter, FiGithub } from 'react-icons/fi';
 import { FaTelegramPlane } from 'react-icons/fa';
@@ -18,6 +20,57 @@ export default function Home() {
   const [isLargerThan768] = useMediaQuery("(min-width: 768px)")
 
   const l = locale === 'en' ? en : de;
+
+  useEffect(() => {
+    const script = document.createElement('script');
+  
+    script.src = "https://cdn.rawgit.com/progers/pathseg/master/pathseg.js";
+    script.async = true;
+  
+    document.body.appendChild(script);
+  
+    return () => {
+      document.body.removeChild(script);
+    }
+  }, []);
+
+  const particlesOptions = {
+    particles: { 
+      number: { 
+        value: 80, 
+        density: { 
+          enable: true, 
+          value_area: 1200, 
+        }
+      },
+      opacity: {
+        value: '0.4'
+      },
+      color: {
+        value: '#01de86'
+      },
+      line_linked: {
+        color: '#6bd2a9',
+        opacity: '0.2',
+        distance: '80'
+      },
+      size: {
+        value: 5
+      },
+      move: {
+        enable: true,
+        speed: 6
+      }
+    },
+    interactivity: {
+      events: {
+        onhover: {
+          enable: true,
+          mode: 'grab'
+        }
+      }
+    }
+  };
 
   const handleLanguageToggle = () => {
     switch (locale) {
@@ -51,7 +104,7 @@ export default function Home() {
             filter={locale === 'en' ? 'grayscale(100%)' : 'grayscale(0%)'}
             />
         </HStack>
-        <Button onClick={onOpen} ml='10px' borderColor="#01de86ff" border="2px" variant="outline">{l.h1ButtonAction}</Button>
+        <Button onClick={onOpen} ml='10px' borderColor="#01de86" border="2px" variant="outline">{l.h1ButtonAction}</Button>
         <Modal
           isCentered
           onClose={onClose}
@@ -150,6 +203,27 @@ export default function Home() {
         <WrapItem>
         </WrapItem>
       </Wrap>
+      <Box my={['50px', '50px', '100px']} position='relative' height='350px' pointerEvents='none'>
+        <Particles
+
+          height='350px'
+          style={{
+            backgroundColor:'#fff',
+            position:'absolute',
+            top:'0px',
+            left:'0px',
+            pointerEvents:'auto'
+          }}
+          params={particlesOptions}
+        />
+        <Center h='100%' px={[ 5, 6, 16, 32 ]}>
+          <VStack zIndex='1' spacing='30px' textAlign='center'>
+            <Heading >Ready to start Staking</Heading>
+            <Text opacity='0.6' pointerEvents='auto'>Follow our quick and easy guide and get started!</Text>
+            <Button onClick={onOpen} size='md' colorScheme='green' pointerEvents='auto'>How to Stake</Button>
+          </VStack>
+        </Center>
+      </Box>
       <Accordion allowToggle maxW='900px' w='90%' mx='auto' my='50px'>
         <AccordionItem>
           <AccordionButton py={[4 , 4 , 6]}>
@@ -160,7 +234,7 @@ export default function Home() {
           </AccordionButton>
           <AccordionPanel>
             <OrderedList>
-              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>Download the Yoroi Light Wallet at <Link color="#01de86ff" href='https://yoroi-wallet.com/' target='_blank'>yoroi-wallet.com</Link>.</ListItem>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>Download the Yoroi Light Wallet at <Link color="#01de86" href='https://yoroi-wallet.com/' target='_blank'>yoroi-wallet.com</Link>.</ListItem>
               <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>Choose your preferred browser option after clicking the download button.</ListItem>
               <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>After adding it to your browser, launch the Yoroi Wallet extension within the browser.</ListItem>
               <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>Simply follow the instructions to connect / create / restore your Cardano wallet.</ListItem>
