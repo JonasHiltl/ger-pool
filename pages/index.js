@@ -38,15 +38,17 @@ export default function Home() {
       },
       line_linked: {
         color: '#6bd2a9',
-        opacity: '0.2',
-        distance: '80'
+        opacity: '0.4',
+        distance: '80',
+        width: '0.8'
       },
       size: {
         value: 5
       },
       move: {
         enable: true,
-        speed: 6
+        speed: 6,
+        out_mode: 'out'
       }
     },
     interactivity: {
@@ -91,7 +93,7 @@ export default function Home() {
             filter={locale === 'en' ? 'grayscale(100%)' : 'grayscale(0%)'}
             />
         </HStack>
-        <Button onClick={onOpen} ml='10px' borderColor="#01de86" border="2px" variant="outline">{l.h1ButtonAction}</Button>
+        <Button onClick={onOpen} colorScheme='green' ml='10px'  border="2px" variant="outline">{l.h1ButtonAction}</Button>
         <Modal
           isCentered
           onClose={onClose}
@@ -119,7 +121,7 @@ export default function Home() {
               </VStack>
             </ModalBody>
             <ModalFooter>
-              <Button variant='outline' borderColor="#01de86ff" border="2px" mr={3} onClick={onClose}>
+              <Button variant='outline' colorScheme='green' border="2px" mr={3} onClick={onClose}>
                 {l.h1ModalClose}
               </Button>
             </ModalFooter>
@@ -183,7 +185,7 @@ export default function Home() {
         <WrapItem w={[ '100%', '100%', '30%']} justifyContent='center'>
           <Box textAlign='center'>
           <Image w={[ 36, 36, 40 ]} mx='auto' my={3} src='wifi.svg' alignItems='center'/>
-            <Heading size="lg">Test</Heading>
+            <Heading size="lg">Reliable Internet</Heading>
             <Text fontSize="sm" opacity='0.6'>Running my stakepool from home, helping to truly decentralize the Cardano ecosystem</Text>
           </Box>
         </WrapItem>
@@ -205,9 +207,9 @@ export default function Home() {
         />
         <Center h='100%' px={[ 5, 6, 16, 32 ]}>
           <VStack zIndex='1' spacing='30px' textAlign='center'>
-            <Heading >Ready to start Staking</Heading>
-            <Text opacity='0.6' pointerEvents='auto'>Follow our quick and easy guide and get started!</Text>
-            <Button onClick={onOpen} size='md' colorScheme='green' pointerEvents='auto'>How to Stake</Button>
+            <Heading >{l.startStaking}</Heading>
+            <Text opacity='0.6' pointerEvents='auto'>{l.startStakingP}</Text>
+            <Button onClick={onOpen} size='md' colorScheme='green' pointerEvents='auto'>{l.startStakingButton}</Button>
           </VStack>
         </Center>
       </Box>
@@ -234,35 +236,35 @@ export default function Home() {
         <AccordionItem>
           <AccordionButton py={[4 , 4 , 6]}>
             <Box flex="1" textAlign="left" p='5px'>
-              <Text fontSize={['md', 'md', "lg"]}>How to stake from Daedalus Wallet?</Text>
+              <Text fontSize={['md', 'md', "lg"]}>{l.daedalusH1}</Text>
             </Box>
             <AccordionIcon />
           </AccordionButton>
           <AccordionPanel>
             <OrderedList>
-              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>Download the Daedalus Wallet at  <Link color="#01de86ff" href='https://daedaluswallet.io/' target='_blank'>daedaluswallet.io</Link>.</ListItem>
-              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>The first time launching the wallet, you will need to wait for Daedalus to sync with the blockchain.</ListItem>
-              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>After Daedalus finished syncing, simply follow the instructions to create / restore your wallet.</ListItem>
-              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>Make sure you have ADA in your wallet. You may fund your wallet by copying an address in the "Receive" tab.</ListItem>
-              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>Click the second button in the left panel and select the "Stake Pools" tab.</ListItem>
-              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>Search for "GER" and click the "Delegate to this pool" button.</ListItem>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>{l.daedalusI1}<Link color="#01de86ff" href='https://daedaluswallet.io/' target='_blank'>daedaluswallet.io</Link>.</ListItem>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>{l.daedalusI2}</ListItem>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>{l.daedalusI3}</ListItem>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>{l.daedalusI4}</ListItem>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>{l.daedalusI5}</ListItem>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>{l.daedalusI6}</ListItem>
             </OrderedList>
           </AccordionPanel>
         </AccordionItem>
         <AccordionItem>
           <AccordionButton py={[4 , 4 , 6]}>
             <Box flex="1" textAlign="left" p='5px'>
-              <Text fontSize={['md', 'md', "lg"]}>How to stake from mobile?</Text>
+              <Text fontSize={['md', 'md', "lg"]}>{l.mobileH1}</Text>
             </Box>
             <AccordionIcon />
           </AccordionButton>
           <AccordionPanel >
             <OrderedList>
-              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>Go and download the Yoroi mobile app for your device: <Link color="#01de86ff" href='https://play.google.com/store/apps/details?id=com.emurgo' target='_blank'>Android</Link> | <Link color="#01de86ff" href='https://apps.apple.com/app/id1447326389' target='_blank'>IOS</Link>.</ListItem>
-              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>Launch the app and follow the instructions to connect / create / restore your Cardano wallet.</ListItem>
-              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>Once set up, You may fund your wallet by creating an address in the "Receive" tab.</ListItem>
-              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>Go to the "Dashboard" tab and click "Go to Staking Center".</ListItem>
-              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>Search for "GER" and click the "Delegate" button.</ListItem>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>{l.mobileI1}<Link color="#01de86ff" href='https://play.google.com/store/apps/details?id=com.emurgo' target='_blank'>Android</Link> | <Link color="#01de86ff" href='https://apps.apple.com/app/id1447326389' target='_blank'>IOS</Link>.</ListItem>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>{l.mobileI2}</ListItem>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>{l.mobileI3}</ListItem>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>{l.mobileI4}</ListItem>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>{l.mobileI5}</ListItem>
             </OrderedList>
           </AccordionPanel>
         </AccordionItem>
