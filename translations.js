@@ -9,6 +9,14 @@ export const en = {
     pModal1: 'Delegation is supported by the Daedalus full-node wallet and the Yoroi browser wallet.',
     pModal2: 'Just select the staking area in either one of the wallets and search for:',
     h1ModalClose: 'Got it',
+    yoroiH1: 'How to stake from Yoroi Wallet?',
+    yoroiI1: 'Download the Yoroi Light Wallet at ',
+    yoroiI2: 'Choose your preferred browser option after clicking the download button.',
+    yoroiI3: 'After adding it to your browser, launch the Yoroi Wallet extension within the browser.',
+    yoroiI4: 'Simply follow the instructions to connect / create / restore your Cardano wallet.',
+    yoroiI5: 'Make sure you have ADA in your wallet. You may fund your wallet by creating an address in the "Receive" tab.',
+    yoroiI6: 'Go to the "Delegation List" tab, and search for "GER".',
+    yoroiI7: 'Select the pool and click the "Delegate" button.'
 }
 
 export const de = {
@@ -22,4 +30,12 @@ export const de = {
     pModal1: 'Die Delegation wird von der Daedalus Full-Node Wallet und der Yoroi Browser Wallet unterstützt.',
     pModal2: 'Wählen Sie einfach in einer der beiden Wallets den staking Bereich aus und suchen Sie nach:',
     h1ModalClose: 'Ok',
+    yoroiH1: 'Wie stake ich mit der Yoroi Wallet?',
+    yoroiI1: 'Downloaden Sie die Yoroa Wallet über ',
+    yoroiI2: 'Wählen Sie Ihren Webbrowser aus, nachdem sie auf den Download-Link geklickt haben.',
+    yoroiI3: 'Sie können nun nach dem Download die Erweiterung innerhalb des Browsers in der rechten, oberen Ecke öffnen.',
+    yoroiI4: 'Folgen Sie einfach den Anweisungen zum Verbinden / Erstellen / Wiederherstellen Ihrer Cardano Wallet.',
+    yoroiI5: 'Sollten Sie kein ADA in ihrer Wallet haben, können sie es mit ihrer Empfangsadresse erhalten.',
+    yoroiI6: 'Gehen Sie zu dem "Delegation List" Reiter, und suchen Sie nach "GER".',
+    yoroiI7: 'Wählen Sie den Pool aus und klicken Sie auf den Delegations Button.'
 }

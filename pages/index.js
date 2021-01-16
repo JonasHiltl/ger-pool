@@ -21,19 +21,6 @@ export default function Home() {
 
   const l = locale === 'en' ? en : de;
 
-  useEffect(() => {
-    const script = document.createElement('script');
-  
-    script.src = "https://cdn.rawgit.com/progers/pathseg/master/pathseg.js";
-    script.async = true;
-  
-    document.body.appendChild(script);
-  
-    return () => {
-      document.body.removeChild(script);
-    }
-  }, []);
-
   const particlesOptions = {
     particles: { 
       number: { 
@@ -228,18 +215,19 @@ export default function Home() {
         <AccordionItem>
           <AccordionButton py={[4 , 4 , 6]}>
             <Box flex="1" textAlign="left" p='5px'>
-              <Text fontSize={['md', 'md', "lg"]}>How to stake from Yoroi Wallet?</Text>
+              <Text fontSize={['md', 'md', "lg"]}>{l.yoroiH1}</Text>
             </Box>
             <AccordionIcon />
           </AccordionButton>
           <AccordionPanel>
             <OrderedList>
-              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>Download the Yoroi Light Wallet at <Link color="#01de86" href='https://yoroi-wallet.com/' target='_blank'>yoroi-wallet.com</Link>.</ListItem>
-              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>Choose your preferred browser option after clicking the download button.</ListItem>
-              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>After adding it to your browser, launch the Yoroi Wallet extension within the browser.</ListItem>
-              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>Simply follow the instructions to connect / create / restore your Cardano wallet.</ListItem>
-              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>Make sure you have ADA in your wallet. You may fund your wallet by creating an address in the "Receive" tab.</ListItem>
-              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>Go to the "Delegation List" tab, and search for "GER".</ListItem>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>{l.yoroiI1}<Link color="#01de86" href='https://yoroi-wallet.com/' target='_blank'>yoroi-wallet.com</Link>.</ListItem>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>{l.yoroiI2}</ListItem>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>{l.yoroiI3}</ListItem>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>{l.yoroiI4}</ListItem>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>{l.yoroiI5}</ListItem>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>{l.yoroiI6}</ListItem>
+              <ListItem my='3px' fontSize={['sm', 'sm', 'md']}>{l.yoroiI7}</ListItem>
             </OrderedList>
           </AccordionPanel>
         </AccordionItem>
