@@ -1,13 +1,13 @@
 export const en = {
-    h1Network: "Homegrown network",
-    pText1: "Many Stake Pools are hosted on AWS, Microsoft or Google cloud infrastructures and therefor controlled by these entities.",
-    pText2: "We aim to keep decentralizing the Cardano ecosystem by running our node on a powerful Raspberry Pi network.",
+    h1Network: "Hybrid network",
+    pText1: "We are partially ",
+    pText2: "We aim to educate new crypto enthusiasts about the phenomenal possibilities provided by the Cardano ecosystem.",
     uptime: "99% Uptime",
     uptimeText: "We are running the Stake Pool as a hybrid system, one part in the cloud, the other as a local network.",
     support: "24/7 support",
     supportText: "Consistent communication with us as enthusiastic Cardano Stake Pool operators.",
     decentralize: "Decentralizing",
-    decentralizeText: "Delegating improves the security of the network and allows you to become part of the Cardano Ecosystem.",
+    decentralizeText: "Delegating improves the security of the network and allows you to become part of the Cardano ecosystem.",
     pMoreInformation: "Get more information:",
     pAnyQuestios: "Have any question?",
     h1ButtonAction: "Delegate",
@@ -42,9 +42,9 @@ export const en = {
 }
 
 export const de = {
-    h1Network: "Heimisches Netzwerk",
+    h1Network: "Hybrides Netzwerk",
     pText1: "Viele Stake Pools werden auf AWS, Microsoft oder Google Cloud-Infrastrukturen gehostet und daher von diesen Unternehmen kontrolliert.",
-    pText2: "Unser Ziel ist es, dass Cardano-Ökosystem weiter zu dezentralisieren, indem wir unseren Pool auf einem leistungsstarken Raspberry Pi-Netzwerk betreiben.",
+    pText2: "Unser Ziel ist es, neue Krypto-Enthusiasten über die phänomenalen Möglichkeiten des Cardano-Ökosystem aufzuklären",
     uptime: "99% Verfügbarkeit",
     uptimeText: "Wir betreiben den Stake Pool als hybrides System, einen Teil in der Cloud, den Anderen als lokales Netzwerk.",
     support: "24/7 Support",

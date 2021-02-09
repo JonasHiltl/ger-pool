@@ -137,16 +137,16 @@ export default function Home() {
         </Modal>
       </Flex>
       <Grid position='absolute' top='50%' left={[ 5, 6, 16, 32 ]} h='200px' transform='translateY(-50%)' display={[ 'none', 'none', 'none', 'grid']}>
-        <Link>
-          <Icon  target='_blank' as={FiTwitter} color='gray.700' w={8} h={8}/>
+        <Link target='_blank' href='https://twitter.com/gerstaking'>
+          <Icon as={FiTwitter} color='gray.700' w={8} h={8}/>
         </Link>
         <Spacer/>
-        <Link>
-          <Icon  target='_blank' as={FaTelegramPlane} color='gray.700' w={8} h={8}/>
+        <Link target='_blank' >
+          <Icon as={FaTelegramPlane} color='gray.700' w={8} h={8}/>
         </Link>
         <Spacer/>
-        <Link>
-        <Icon  target='_blank' as={AiOutlineYoutube} color='gray.700' w={8} h={8}/>
+        <Link target='_blank'>
+        <Icon as={AiOutlineYoutube} color='gray.700' w={8} h={8}/>
         </Link>
       </Grid>
       <Flex px={[ 5, 6, 16, 32 ]} pb={['10px', '10px', '30px', '50px']} h='calc(100vh - 96px)' flexDirection={[ 'column-reverse', 'column-reverse', 'column-reverse', 'row' ]} justifyContent='space-around'>
@@ -292,7 +292,7 @@ export default function Home() {
             <Flex direction={['column', 'column', 'column', 'column']}>
               <Text fontSize="sm" color='gray.50'  opacity='0.5' mr={[0, 0, 1]}>{l.pMoreInformation}</Text>
               <Flex>
-                <Link target='_blank' ml='auto' mr='5px' >
+                <Link target='_blank' ml='auto' mr='5px' href='https://twitter.com/gerstaking'>
                   <Icon as={FiTwitter} color='gray.50' h={[6, 6, 5]} w={[6, 6, 5]}/>
                 </Link>
                 <Link target='_blank' ml={1} mr='5px'>
