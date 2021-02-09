@@ -6,6 +6,7 @@ import { en, de } from '../translations';
 
 import { FiTwitter, FiGithub } from 'react-icons/fi';
 import { FaTelegramPlane } from 'react-icons/fa';
+import { AiOutlineYoutube } from 'react-icons/ai'
 
 //breakpoints
 //base
@@ -76,7 +77,7 @@ export default function Home() {
     <Box pos='relative' h='100vh'>
       <Flex px={[ 5, 6, 16, 32 ]} py={[ 6, 6 ]} alignItems='center'>
         {/* <Image src='Logo.svg'w='60px' mr={[ 2, 4, 6 ]} /> */}
-        <Heading color='gray.900' as="h1" size='2xl' >{isLargerThan768 ? 'GER Pool' : 'GER'}</Heading>
+        <Heading color='gray.900' as="h1" size='2xl' >{isLargerThan768 ? 'German staking' : 'GER'}</Heading>
         <Spacer />
         <HStack spacing='4px'>
           <Image 
@@ -138,7 +139,7 @@ export default function Home() {
         </Link>
         <Spacer/>
         <Link>
-        <Icon as={FiGithub} color='gray.700' w={8} h={8}/>
+        <Icon as={AiOutlineYoutube} color='gray.700' w={8} h={8}/>
         </Link>
       </Grid>
       <Flex px={[ 5, 6, 16, 32 ]} pb={['10px', '10px', '30px', '50px']} h='calc(100vh - 96px)' flexDirection={[ 'column-reverse', 'column-reverse', 'column-reverse', 'row' ]} justifyContent='space-around'>
@@ -287,7 +288,7 @@ export default function Home() {
                   <Icon as={FaTelegramPlane} color='gray.50' w={4}/>
                 </Link>
                 <Link ml={1} mr='0px'>
-                  <Icon as={FiGithub} color='gray.50' w={4} />
+                  <Icon as={AiOutlineYoutube} color='gray.50' w={4} />
                 </Link>
               </Flex>
             </Flex>
