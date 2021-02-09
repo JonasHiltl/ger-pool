@@ -77,7 +77,14 @@ export default function Home() {
     <Box pos='relative' h='100vh'>
       <Flex px={[ 5, 6, 16, 32 ]} py={[ 6, 6 ]} alignItems='center'>
         {/* <Image src='Logo.svg'w='60px' mr={[ 2, 4, 6 ]} /> */}
-        <Heading color='gray.900' as="h1" size='2xl' >{isLargerThan768 ? 'German staking' : 'GER'}</Heading>
+        <Center>
+          <Image src='logo.svg' boxSize={['60px', '60px', "70px"]} mr='10px'/>
+          {isLargerThan768 ?
+            <Heading color='gray.900' as="h1" size="2xl">German staking</Heading>
+            :
+            null
+          }
+        </Center>
         <Spacer />
         <HStack spacing='4px'>
           <Image 
@@ -131,20 +138,24 @@ export default function Home() {
       </Flex>
       <Grid position='absolute' top='50%' left={[ 5, 6, 16, 32 ]} h='200px' transform='translateY(-50%)' display={[ 'none', 'none', 'none', 'grid']}>
         <Link>
-          <Icon as={FiTwitter} color='gray.700' w={8} h={8}/>
+          <Icon  target='_blank' as={FiTwitter} color='gray.700' w={8} h={8}/>
         </Link>
         <Spacer/>
         <Link>
-          <Icon as={FaTelegramPlane} color='gray.700' w={8} h={8}/>
+          <Icon  target='_blank' as={FaTelegramPlane} color='gray.700' w={8} h={8}/>
         </Link>
         <Spacer/>
         <Link>
-        <Icon as={AiOutlineYoutube} color='gray.700' w={8} h={8}/>
+        <Icon  target='_blank' as={AiOutlineYoutube} color='gray.700' w={8} h={8}/>
         </Link>
       </Grid>
       <Flex px={[ 5, 6, 16, 32 ]} pb={['10px', '10px', '30px', '50px']} h='calc(100vh - 96px)' flexDirection={[ 'column-reverse', 'column-reverse', 'column-reverse', 'row' ]} justifyContent='space-around'>
         <Box mt={[ '0px', '0px', '0px', 'auto']} maxWidth={['90%', '90%', '300px', '400px']}>
-          <Heading mb='10px' size="lg" >{l.h1Network}</Heading>
+          {!isLargerThan768 ?
+            <Heading mb='10px' size='lg' >German Staking</Heading>
+            :
+            <Heading mb='10px' size="lg" >{l.h1Network}</Heading>
+          }
           <Flex>
             <VStack spacing='3px'>
               <Circle bg='gray.700' w='7px' h='7px'/>
@@ -172,22 +183,22 @@ export default function Home() {
         <WrapItem w={[ '100%', '100%', '30%']} justifyContent='center'>
           <Box textAlign='center'>
             <Image w={[ 36, 36, 40 ]} mx='auto' my={3} src='decentralized.svg' alignItems='center'/>
-            <Heading size="lg" my={3}>Decentralizing</Heading>
-            <Text my={3} fontSize="sm" opacity='0.6'>Operating an environment-friendly 5 Watt stakepool 24/7 with 99.9% uptime</Text>
+            <Heading size="lg" my={3}>{l.decentralize}</Heading>
+            <Text my={3} fontSize="sm" opacity='0.6'>{l.decentralizeText}</Text>
           </Box>
         </WrapItem >
         <WrapItem w={[ '100%', '100%', '30%']} justifyContent='center'>
           <Box textAlign='center'>
             <Image w={[ 36, 36, 40 ]} mx='auto' my={3} src='support.svg' alignItems='center'/>
             <Heading size="lg" my={3}>24/7 support</Heading>
-            <Text my={3} fontSize="sm" opacity='0.6'>Highly reliable because of very good Internet connection in order to get all my slots</Text>
+            <Text my={3} fontSize="sm" opacity='0.6'>{l.supportText}</Text>
           </Box>
         </WrapItem>
         <WrapItem w={[ '100%', '100%', '30%']} justifyContent='center'>
           <Box textAlign='center'>
           <Image w={[ 36, 36, 40 ]} mx='auto' my={3} src='wifi.svg' alignItems='center'/>
-            <Heading size="lg">Reliable Internet</Heading>
-            <Text fontSize="sm" opacity='0.6'>Running my stakepool from home, helping to truly decentralize the Cardano ecosystem</Text>
+          <Heading size="lg" my={3}>{l.uptime}</Heading>
+          <Text fontSize="sm" opacity='0.6'>{l.uptimeText}</Text>
           </Box>
         </WrapItem>
         <WrapItem>
@@ -281,16 +292,16 @@ export default function Home() {
             <Flex direction={['column', 'column', 'column', 'column']}>
               <Text fontSize="sm" color='gray.50'  opacity='0.5' mr={[0, 0, 1]}>{l.pMoreInformation}</Text>
               <Flex>
-                <Link ml='auto' mr='5px' >
+                <Link target='_blank' ml='auto' mr='5px' >
                   <Icon as={FiTwitter} color='gray.50' h={[6, 6, 5]} w={[6, 6, 5]}/>
                 </Link>
-                <Link ml={1} mr='5px'>
+                <Link target='_blank' ml={1} mr='5px'>
                   <Icon as={FaTelegramPlane} color='gray.50' h={[6, 6, 5]} w={[6, 6, 5]}/>
                 </Link>
-                <Link ml={1} mr='5px'>
+                <Link target='_blank' ml={1} mr='5px'>
                   <Icon as={AiOutlineYoutube} color='gray.50' h={[6, 6, 5]} w={[6, 6, 5]} />
                 </Link>
-                <Link ml={1} mr='0px' href='https://www.instagram.com/gerstaking/'>
+                <Link  target='_blank' ml={1} mr='0px' href='https://www.instagram.com/ger_staking/'>
                   <Icon as={AiOutlineInstagram} color='gray.50' h={[6, 6, 5]} w={[6, 6, 5]} />
                 </Link>
               </Flex>
