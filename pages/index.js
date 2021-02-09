@@ -4,9 +4,9 @@ import Particles from 'react-particles-js';
 import { useRouter } from 'next/router';
 import { en, de } from '../translations';
 
-import { FiTwitter, FiGithub } from 'react-icons/fi';
+import { FiTwitter } from 'react-icons/fi';
 import { FaTelegramPlane } from 'react-icons/fa';
-import { AiOutlineYoutube } from 'react-icons/ai'
+import { AiOutlineYoutube, AiOutlineInstagram } from 'react-icons/ai'
 
 //breakpoints
 //base
@@ -276,19 +276,22 @@ export default function Home() {
           <Flex justifyContent='space-between'>
             <Box>
               <Text fontSize="sm" color='gray.50' opacity='0.5'>{l.pAnyQuestios}</Text>
-              <Text fontSize="sm" color='gray.50'>jonashiltl@gmx.net</Text>
+              <Text fontSize="sm" color='gray.50'>support@germanstaking.com</Text>
             </Box>
             <Flex direction={['column', 'column', 'column', 'column']}>
               <Text fontSize="sm" color='gray.50'  opacity='0.5' mr={[0, 0, 1]}>{l.pMoreInformation}</Text>
               <Flex>
-                <Link ml='auto' mr='0px'>
-                  <Icon as={FiTwitter} color='gray.50' w={4}/>
+                <Link ml='auto' mr='5px' >
+                  <Icon as={FiTwitter} color='gray.50' h={[6, 6, 5]} w={[6, 6, 5]}/>
                 </Link>
-                <Link ml={1} mr='0px'>
-                  <Icon as={FaTelegramPlane} color='gray.50' w={4}/>
+                <Link ml={1} mr='5px'>
+                  <Icon as={FaTelegramPlane} color='gray.50' h={[6, 6, 5]} w={[6, 6, 5]}/>
                 </Link>
-                <Link ml={1} mr='0px'>
-                  <Icon as={AiOutlineYoutube} color='gray.50' w={4} />
+                <Link ml={1} mr='5px'>
+                  <Icon as={AiOutlineYoutube} color='gray.50' h={[6, 6, 5]} w={[6, 6, 5]} />
+                </Link>
+                <Link ml={1} mr='0px' href='https://www.instagram.com/gerstaking/'>
+                  <Icon as={AiOutlineInstagram} color='gray.50' h={[6, 6, 5]} w={[6, 6, 5]} />
                 </Link>
               </Flex>
             </Flex>
