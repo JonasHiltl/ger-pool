@@ -1,6 +1,6 @@
 export const en = {
     h1Network: "Hybrid network",
-    pText1: "We operate our stake pool partly in the cloud and also locally to provide seamless availability .",
+    pText1: "We operate our stake pool partially in the cloud and also locally to provide seamless availability .",
     pText2: "We aim to educate new crypto enthusiasts about the phenomenal possibilities provided by the Cardano ecosystem.",
     uptime: "99% Uptime",
     uptimeText: "We are running the Stake Pool as a hybrid system, one part in the cloud, the other as a local network.",
