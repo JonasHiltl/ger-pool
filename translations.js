@@ -1,6 +1,6 @@
 export const en = {
     h1Network: "Hybrid network",
-    pText1: "We operate our stake pool partially in the cloud and also locally to provide seamless availability .",
+    pText1: "We operate our stake pool partially in the cloud and also locally to provide seamless availability.",
     pText2: "We aim to educate new crypto enthusiasts about the phenomenal possibilities provided by the Cardano ecosystem.",
     uptime: "99% Uptime",
     uptimeText: "We are running the Stake Pool as a hybrid system, one part in the cloud, the other as a local network.",
@@ -44,7 +44,7 @@ export const en = {
 export const de = {
     h1Network: "Hybrides Netzwerk",
     pText1: "Wir betreiben unseren Stake Pool teilweise in der Cloud und außerdem lokal um eine durchgängige Verfügbarkeit zu ermöglichen.",
-    pText2: "Unser Ziel ist es, neue Krypto-Enthusiasten über die phänomenalen Möglichkeiten des Cardano-Ökosystem aufzuklären",
+    pText2: "Unser Ziel ist es, neue Krypto-Enthusiasten über die phänomenalen Möglichkeiten des Cardano-Ökosystem aufzuklären.",
     uptime: "99% Verfügbarkeit",
     uptimeText: "Wir betreiben den Stake Pool als hybrides System, einen Teil in der Cloud, den Anderen als lokales Netzwerk.",
     support: "24/7 Support",
