@@ -128,6 +128,9 @@ export default function Home() {
                       </Link>
                     </Flex>
                     <Text my='10px' fontSize="sm" textAlign='center'>{l.pModal2}</Text>
+                    <Center>
+                      <Text as="u" fontWeight='bold'>GER</Text>
+                    </Center>
                   </Box>
                 </VStack>
               </ModalBody>
