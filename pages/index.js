@@ -128,10 +128,14 @@ export default function Home() {
                       </Link>
                     </Flex>
                     <Text my='10px' fontSize="sm" textAlign='center'>{l.pModal2}</Text>
-                    <Center>
-                      <Text fontSize={['sm', 'sm', 'md']} as="u" fontWeight='bold'>GER</Text>
-                      <Text fontSize={['sm', 'sm', 'md']} >Pool ID: 7d48468f87fe87243f0590c842ff8e543c329335e50c78d2ccbda682</Text>
-                    </Center>
+                    <Box>
+                      <Center>
+                        <Text fontSize={['sm', 'sm', 'md']} as="u" fontWeight='bold'>GER</Text>
+                      </Center>
+                      <Center>
+                        <Text fontSize={['xs', 'xs', 'xs']} >Pool ID: 7d48468f87fe87243f0590c842ff8e543c329335e50c78d2ccbda682</Text>
+                      </Center>
+                    </Box>
                   </Box>
                 </VStack>
               </ModalBody>
