@@ -1,0 +1,19 @@
+{
+    "info": {
+        "url_png_icon_64x64": "https://imgur.com/VA2yJe9",
+        "url_png_logo": "https://imgur.com/VA2yJe9",
+        "location": "Hamburg, Germany",
+        "social": {
+            "twitter_handle": "gerstaking",
+            "telegram_handle": "GERJonas",
+            "facebook_handle": "",
+            "youtube_handle": "UCdvF-V0-WTeE9edWpSJY4iw",
+            "twitch_handle": "",
+            "discord_handle": "",
+            "github_handle": ""
+        }
+    },
+    "my-pool-ids": {
+        "0": "7d48468f87fe87243f0590c842ff8e543c329335e50c78d2ccbda682"
+    }
+}
