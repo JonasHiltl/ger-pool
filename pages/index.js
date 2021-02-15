@@ -152,12 +152,12 @@ export default function Home() {
             <Icon as={FiTwitter} color='gray.700' w={8} h={8}/>
           </Link>
           <Spacer/>
-          <Link target='_blank' >
+          <Link target='_blank' href='https://t.me/GERJonas'>
             <Icon as={FaTelegramPlane} color='gray.700' w={8} h={8}/>
           </Link>
           <Spacer/>
-          <Link target='_blank'>
-          <Icon as={AiOutlineYoutube} color='gray.700' w={8} h={8}/>
+          <Link target='_blank' href='https://www.youtube.com/channel/UCdvF-V0-WTeE9edWpSJY4iw'>
+            <Icon as={AiOutlineYoutube} color='gray.700' w={8} h={8}/>
           </Link>
         </Grid>
         <Flex px={[ 5, 6, 16, 32 ]} pb={['10px', '10px', '30px', '50px']} h='calc(100vh - 96px)' flexDirection={[ 'column-reverse', 'column-reverse', 'column-reverse', 'row' ]} justifyContent='space-around'>
