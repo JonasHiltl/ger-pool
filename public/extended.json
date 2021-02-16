@@ -14,7 +14,7 @@
         },
         "about": {
             "me": "Welcome to German Staking, we create Cardano Content for German Cardano enthusiasts to simplify the so often overwhelming Entrypoint of the Cardano ecosystem.",
-            "server": "We use a local Relay and a cloud hosted Relay to insure consistent connection between our Leader node and the Relays. All Nodes are hosted and run in Germany!"
+            "server": "We use a local Relay and a cloud hosted Relay to insure consistent connection between our Leader Node and the Relays. All Nodes are hosted and run in Germany!"
         }
     },
     "my-pool-ids": {
