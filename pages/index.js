@@ -245,6 +245,14 @@ export default function Home() {
               <AccordionIcon />
             </AccordionButton>
             <AccordionPanel>
+              <Text mb="8px">{l.usEducationText1}</Text>
+              <Text>{l.usEducationText2}</Text>
+              <Wrap w="100%" my="30px" justify={[ "space-evenly", "space-evenly"]} shouldWrapChildren="true" spacing="20px">
+                <Image src="screen1.PNG" width={["120px", "150px", "180px"]} mx="10px"/>
+                <Image src="screen2.PNG" width={["120px", "150px", "180px"]} mx="10px"/>
+                <Image src="screen3.PNG" width={["120px", "150px", "180px"]} mx="10px"/>
+                <Image src="screen4.PNG" width={["120px", "150px", "180px"]} mx="10px"/>
+              </Wrap>
               <Flex align='center' mb='8px'>
                 <Icon color='#01DE86' as={BsBook} color='gray.700' w={8} h={8} mr='8px'/>
                 <Text fontSize={['sm', 'sm', 'md']}>{l.usEducation}</Text>
