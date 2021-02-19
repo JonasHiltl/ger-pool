@@ -248,10 +248,10 @@ export default function Home() {
               <Text mb="8px">{l.usEducationText1}</Text>
               <Text>{l.usEducationText2}</Text>
               <Wrap w="100%" my="30px" justify="space-evenly" shouldWrapChildren="true">
-                <Image src="screen1.PNG" width={["120px", "150px", "180px"]} height={["90", "112", "135"]} mx="10px"/>
-                <Image src="screen2.PNG" width={["120px", "150px", "180px"]} height={["90", "112", "135"]} mx="10px"/>
-                <Image src="screen3.PNG" width={["120px", "150px", "180px"]} height={["90", "112", "135"]} mx="10px"/>
-                <Image src="screen4.PNG" width={["120px", "150px", "180px"]} height={["90", "112", "135"]} mx="10px"/>
+                <Image src="screen1.PNG" maxWidth={["120px", "150px", "180px"]}/>
+                <Image src="screen2.PNG" maxWidth={["120px", "150px", "180px"]}/>
+                <Image src="screen3.PNG" maxWidth={["120px", "150px", "180px"]}/>
+                <Image src="screen4.PNG" maxWidth={["120px", "150px", "180px"]}/>
               </Wrap>
               <Flex align='center' mb='8px'>
                 <Icon color='#01DE86' as={BsBook} color='gray.700' w={8} h={8} mr='8px'/>
