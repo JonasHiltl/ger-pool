@@ -247,7 +247,7 @@ export default function Home() {
             <AccordionPanel>
               <Text mb="8px">{l.usEducationText1}</Text>
               <Text>{l.usEducationText2}</Text>
-              <Wrap w="100%" my="30px" justify={[ "space-evenly", "space-evenly"]} shouldWrapChildren="true" spacing="20px">
+              <Wrap w="100%" my="30px" justify="space-evenly" shouldWrapChildren="true">
                 <Image src="screen1.PNG" width={["120px", "150px", "180px"]} height={["90", "112", "135"]} mx="10px"/>
                 <Image src="screen2.PNG" width={["120px", "150px", "180px"]} height={["90", "112", "135"]} mx="10px"/>
                 <Image src="screen3.PNG" width={["120px", "150px", "180px"]} height={["90", "112", "135"]} mx="10px"/>
