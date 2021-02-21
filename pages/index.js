@@ -6,7 +6,7 @@ import { en, de } from '../translations';
 import { FiTwitter } from 'react-icons/fi';
 import { FaTelegramPlane } from 'react-icons/fa';
 import { AiOutlineYoutube, AiOutlineInstagram, AiOutlineWifi } from 'react-icons/ai'
-import { BsBook } from 'react-icons/bs';
+import { BsBook, BsCheckCircle } from 'react-icons/bs';
 import { IoPricetagOutline } from 'react-icons/io5';
 
 //breakpoints
@@ -128,7 +128,7 @@ export default function Home() {
                       </Link>
                     </Flex>
                     <Text my='10px' fontSize="sm" textAlign='center'>{l.pModal2}</Text>
-                    <Box>
+                    <Box mb='10px'>
                       <Center>
                         <Text fontSize={['sm', 'sm', 'md']} as="u" fontWeight='bold'>GER</Text>
                       </Center>
@@ -136,6 +136,7 @@ export default function Home() {
                         <Text fontSize={['xs', 'xs', 'xs']} >Pool ID: 7d48468f87fe87243f0590c842ff8e543c329335e50c78d2ccbda682</Text>
                       </Center>
                     </Box>
+                    <Text my='10px' fontSize="sm" textAlign='center'>{l.pModal3}<Text as='u'>{l.pModal4}</Text>{l.pModal5}</Text>
                   </Box>
                 </VStack>
               </ModalBody>
@@ -152,11 +153,11 @@ export default function Home() {
             <Icon as={FiTwitter} color='gray.700' w={8} h={8}/>
           </Link>
           <Spacer/>
-          <Link target='_blank' href='https://t.me/GERJonas'>
+          <Link target='_blank' href='https://t.me/germanstaking'>
             <Icon as={FaTelegramPlane} color='gray.700' w={8} h={8}/>
           </Link>
           <Spacer/>
-          <Link target='_blank' href='https://www.youtube.com/channel/UCdvF-V0-WTeE9edWpSJY4iw'>
+          <Link target='_blank' href='https://www.youtube.com/channel/UCMCLQZUcbEbqs_I_jXeAOzw'>
             <Icon as={AiOutlineYoutube} color='gray.700' w={8} h={8}/>
           </Link>
         </Grid>
@@ -215,6 +216,54 @@ export default function Home() {
           <WrapItem>
           </WrapItem>
         </Wrap>
+        <Box display='flex' justifyContent='center' py='50px'>
+          <Box 
+            p='20px' 
+            borderWidth="1px" 
+            borderRadius="lg"          
+            cursor='pointer'
+            transition='box-shadow 300ms'
+            _hover={{
+              boxShadow: '0 13px 15px 0 rgba(0, 0, 0, 0.3)'
+            }}
+          >
+            <VStack spacing='30px'>
+              <Box w='100%'>
+                <Box mb='20px'>
+                  <Heading size='lg'>GER</Heading>
+                  <Box w={['50px', '50px', '60px']} h='4px' backgroundColor='green.500'></Box>
+                </Box>
+                <Heading size='3xl'>1%</Heading>
+                <Text fontSize='2xl' mb='10px'>{l.cardMargin}</Text>
+                <Heading size='3xl'>340 ADA</Heading>
+                <Text fontSize='2xl'>{l.cardaFee}</Text>
+              </Box>
+              <Box w='100%' >
+                <Flex alignItems='center' mb='4px'>
+                  <Icon as={BsCheckCircle} color='green.500' mr='4px'/>
+                  <Text>{l.cardMonitoring}</Text>
+                </Flex>
+                <Flex alignItems='center' mb='4px'>
+                  <Icon as={BsCheckCircle} color='green.500' mr='4px'/>
+                  <Text>{l.cardFast}</Text>
+                </Flex>
+                <Flex alignItems='center' mb='4px'>
+                  <Icon as={BsCheckCircle} color='green.500' mr='4px'/>
+                  <Text>{l.cardPoolMargin}</Text>
+                </Flex>
+                { locale === 'de' ?
+                  <Flex alignItems='center' mb='4px'>
+                    <Icon as={BsCheckCircle} color='green.500' mr='4px'/>
+                    <Text>Betrieben und gehostet in Deutschland</Text>
+                  </Flex>
+                  :
+                  null
+                }
+              </Box>
+              <Button onClick={onOpen} colorScheme='green' ml='10px'  border="2px" variant="outline">{l.h1ButtonAction}</Button>
+            </VStack>
+          </Box>
+        </Box>
         <Box my={['50px', '50px', '100px']} position='relative' height='350px' pointerEvents='none'>
           <Particles
 
@@ -344,10 +393,10 @@ export default function Home() {
                   <Link target='_blank' ml='auto' mr='5px' href='https://twitter.com/gerstaking'>
                     <Icon as={FiTwitter} color='gray.50' h={[6, 6, 5]} w={[6, 6, 5]}/>
                   </Link>
-                  <Link target='_blank' ml={1} mr='5px'>
+                  <Link target='_blank' ml={1} mr='5px' href='https://t.me/germanstaking'>
                     <Icon as={FaTelegramPlane} color='gray.50' h={[6, 6, 5]} w={[6, 6, 5]}/>
                   </Link>
-                  <Link target='_blank' ml={1} mr='5px'>
+                  <Link target='_blank' ml={1} mr='5px' href='https://www.youtube.com/channel/UCMCLQZUcbEbqs_I_jXeAOzw'>
                     <Icon as={AiOutlineYoutube} color='gray.50' h={[6, 6, 5]} w={[6, 6, 5]} />
                   </Link>
                   <Link  target='_blank' ml={1} mr='0px' href='https://www.instagram.com/ger_staking/'>
