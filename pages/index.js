@@ -1,5 +1,6 @@
 import { ListItem, OrderedList, useDisclosure, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Wrap, WrapItem, Button, Flex, Icon, Heading, Text, Center, Spacer, Grid, Box, Link, Circle, Switch, VStack, HStack, Image, Accordion, AccordionButton, AccordionItem, AccordionPanel, AccordionIcon, useMediaQuery, flexboxParser } from "@chakra-ui/react";
 import Particles from 'react-particles-js';
+import { React, useState } from 'react';
 import { useRouter } from 'next/router';
 import { en, de } from '../translations';
 
@@ -19,6 +20,7 @@ export default function Home() {
   const router = useRouter()
   const { locale } = router
   const { isOpen, onOpen, onClose } = useDisclosure()
+  const [current, setCurrent] = useState(0);
   const [isLargerThan768] = useMediaQuery("(min-width: 768px)")
 
   const l = locale === 'en' ? en : de;
@@ -74,6 +76,18 @@ export default function Home() {
     }
   }
 
+  const increment = () => {
+		setCurrent(current + 1)
+		console.log('onChange:', current);
+	};
+
+	const decrement = () => {
+		setCurrent(current - 1)
+		console.log('onChange:', current);
+	};
+
+  const isDisabled = current === 0
+
   return (
     <>
       <title>German Staking | Cardano Stake Pool</title>
@@ -110,41 +124,61 @@ export default function Home() {
             onClose={onClose}
             isOpen={isOpen}
             motionPreset="slideInBottom"
+            
           >
             <ModalOverlay />
             <ModalContent w={['95%', '95%', '100%']}>
               <ModalHeader>{l.h1Modal}</ModalHeader>
-                <ModalCloseButton right='10px' />
-              <ModalBody >
-                <VStack>
-                  <Box>
-                    <Text mb='10px' fontSize="sm" textAlign='center'>{l.pModal1}</Text>
+              <ModalBody>
+                {current === 0 ?
+                  <>
+                    <Text mb='10px' fontSize="sm">{l.pModal1}</Text>
                     <Flex my='10px' mx='auto' justifyContent='space-between' w='210px'>
-                      <Link p='3px' border="1px" borderRadius="5px" borderColor="#82ff65ff" href='https://daedaluswallet.io/' target="_blank">
-                        <Image boxSize={[ '70px', '80px', '80px' ]} src='/daedalus-logo.svg' alt="Yoroi Wallet Logo"/>
-                      </Link>
-                      <Link p='3px' border="1px" borderRadius="5px" borderColor="#3353e0ff" href='https://yoroi-wallet.com/' target="_blank">
-                        <Image boxSize={[ '70px', '80px', '80px' ]} src='/yoroi-logo.svg' alt="Yoroi Wallet Logo"/>
-                      </Link>
+                        <Image p='5px' border="1px" borderRadius="5px" borderColor="#82ff65ff" boxSize={[ '70px', '80px', '80px' ]} src='/daedalus-logo.svg' alt="Yoroi Wallet Logo"/>
+                        <Image p='5px' border="1px" borderRadius="5px" borderColor="#3353e0ff" boxSize={[ '70px', '80px', '80px' ]} src='/yoroi-logo.svg' alt="Yoroi Wallet Logo"/>
                     </Flex>
-                    <Text my='10px' fontSize="sm" textAlign='center'>{l.pModal2}</Text>
+                    <Text fontSize="sm">
+                      {l.pModalText1}<Link color="green.500" href='https://daedaluswallet.io/' target="_blank">Daedalus Wallet</Link>, <Link color="green.500" href='https://play.google.com/store/apps/details?id=com.emurgo' target='_blank'>Android</Link> | <Link color="green.500" href='https://apps.apple.com/app/id1447326389' target='_blank'>IOS</Link>{l.pModalText12}<Link color="green.500" href='https://yoroi-wallet.com/#/' target='_blank'>Web-App</Link>{l.pModalText13}
+                    </Text>
+                  </>
+                :
+                null
+                }
+                {current === 1 ?
+                  <>
+                    <Text my='10px' fontSize="sm">{l.pModal2}</Text>
                     <Box mb='10px'>
                       <Center>
                         <Text fontSize={['sm', 'sm', 'md']} as="u" fontWeight='bold'>GER</Text>
                       </Center>
                       <Center>
-                        <Text fontSize={['xs', 'xs', 'xs']} >Pool ID: 7d48468f87fe87243f0590c842ff8e543c329335e50c78d2ccbda682</Text>
+                        <Text fontSize={['xs', 'xs', 'xs']} >Pool ID: pool104yydru8l6rjg0c9jryy9luw2s7r9ye4u5x835kvhkngy24986h</Text>
                       </Center>
                     </Box>
+                    <Center>
+                      <Image src='searchOutput.JPG' w='70%'></Image>
+                    </Center>
+                  </>
+                :
+                null
+                }
+                {current === 2 ? 
+                  <>
                     <Text my='10px' fontSize="sm" textAlign='center'>{l.pModal3}<Text as='u'>{l.pModal4}</Text>{l.pModal5}</Text>
-                  </Box>
-                </VStack>
+                    <Center>
+                      <Image src='delegateButton.JPG' w='70%'></Image>
+                    </Center>
+                  </>
+                :
+                null
+                }
+                {current === 2 ?
+                  <Button type='primary' variant='outline' colorScheme='green' border="2px" mt={3} mr={3} onClick={onClose}>{l.h1ModalClose}</Button>
+                  :
+                  <Button type='primary' onClick={increment} variant='outline' colorScheme='green' border="2px" mt={3} mr={3}>{l.next}</Button>
+                }
+                <Button isDisabled={isDisabled} onClick={decrement} variant='outline' colorScheme='green' border="2px" mt={3} mr={3}>{l.previous}</Button>
               </ModalBody>
-              <ModalFooter>
-                <Button variant='outline' colorScheme='green' border="2px" mr={3} onClick={onClose}>
-                  {l.h1ModalClose}
-                </Button>
-              </ModalFooter>
             </ModalContent>
           </Modal>
         </Flex>
