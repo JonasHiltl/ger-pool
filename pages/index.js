@@ -151,9 +151,7 @@ export default function Home() {
                       <Center>
                         <Text fontSize={['sm', 'sm', 'md']} as="u" fontWeight='bold'>GER</Text>
                       </Center>
-                      <Center>
-                        <Text fontSize={['xs', 'xs', 'xs']} >Pool ID: pool104yydru8l6rjg0c9jryy9luw2s7r9ye4u5x835kvhkngy24986h</Text>
-                      </Center>
+                      <Text fontSize={['xs', 'xs', 'xs']} >Pool ID: pool104yydru8l6rjg0c9jryy9luw2s7r9ye4u5x835kvhkngy24986h</Text>
                     </Box>
                     <Center>
                       <Image src='searchOutput.JPG' w='70%'></Image>
