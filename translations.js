@@ -78,7 +78,7 @@ export const de = {
     pMoreInformation: "Erfahren Sie mehr:",
     pAnyQuestios: "Haben Sie Fragen?",
     h1ButtonAction: "Delegieren",
-    h1Modal: 'So können sie Staken',
+    h1Modal: 'So können sie Delegieren',
     pModal1: 'Die Delegation wird von der Daedalus Full-Node Wallet und der Yoroi Browser Wallet unterstützt.',
     pModal2: 'Wählen Sie einfach in einer der beiden Wallets den staking Bereich aus und suchen Sie nach:',
     pModal3: 'Klicken Sie den ',
