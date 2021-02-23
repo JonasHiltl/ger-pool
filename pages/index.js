@@ -166,6 +166,7 @@ export default function Home() {
                     <Center>
                       <Image src='delegateButton.JPG' w='70%'></Image>
                     </Center>
+                    <Text my='10px' fontSize="sm" textAlign='center'>{l.pModalText14}</Text>
                   </>
                 :
                 null
