@@ -97,7 +97,7 @@ export default function Home() {
           <Center>
             <Image src='logo.svg' boxSize={['60px', '60px', "70px"]} mr='10px'/>
             {isLargerThan768 ?
-              <Heading color='gray.900' as="h1" size="2xl">German staking</Heading>
+              <Heading color='gray.900' as="h1" size="2xl">German Staking</Heading>
               :
               null
             }
