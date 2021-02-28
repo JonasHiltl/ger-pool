@@ -3,7 +3,7 @@ export const en = {
     pText1: "We operate our stake pool partially in the cloud and also locally to provide seamless availability.",
     pText2: "We aim to educate new crypto enthusiasts about the phenomenal possibilities provided by the Cardano ecosystem.",
     uptime: "99,9% Uptime",
-    uptimeText: "We are running the Stake Pool as a hybrid system, one part in the cloud, the other as a local network.",
+    uptimeText: "We are running the Stake Pool as a hybrid system, one part in the cloud, the other as a bare metal server.",
     support: "24/7 support",
     supportText: "Consistent communication with us as enthusiastic Cardano Stake Pool operators.",
     decentralize: "Decentralizing",
