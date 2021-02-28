@@ -284,6 +284,10 @@ export default function Home() {
                   <Icon as={BsCheckCircle} color='green.500' mr='4px'/>
                   <Text>{l.cardPoolMargin}</Text>
                 </Flex>
+                <Flex alignItems='center' mb='4px'>
+                  <Icon as={BsCheckCircle} color='green.500' mr='4px'/>
+                  <Text>{l.cardAlerts}</Text>
+                </Flex>
                 { locale === 'de' ?
                   <Flex alignItems='center' mb='4px'>
                     <Icon as={BsCheckCircle} color='green.500' mr='4px'/>
