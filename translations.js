@@ -13,7 +13,7 @@ export const en = {
     cardMonitoring: 'Constant monitoring',
     cardFast:'Fast and reliable hybrid servers',
     cardPoolMargin: '1% pool margin',
-    cardAlerts: '24/7/365 alerting ystem',
+    cardAlerts: '24/7/365 alerting system',
     pMoreInformation: "Get more information:",
     pAnyQuestios: "Have any question?",
     h1ButtonAction: "Delegate",
