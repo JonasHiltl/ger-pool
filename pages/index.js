@@ -266,7 +266,7 @@ export default function Home() {
                   <Heading size='lg'>GER</Heading>
                   <Box w={['50px', '50px', '60px']} h='4px' backgroundColor='green.500'></Box>
                 </Box>
-                <Heading size='3xl'>1%</Heading>
+                <Heading size='3xl'>0.5%</Heading>
                 <Text fontSize='2xl' mb='10px'>{l.cardMargin}</Text>
                 <Heading size='3xl'>340 ADA</Heading>
                 <Text fontSize='2xl'>{l.cardaFee}</Text>
