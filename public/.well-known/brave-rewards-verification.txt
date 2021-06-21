@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: germanstaking.com
+Token: 7215a606c25d5f2dfc3e8b9aeb3dd779eaa0013e28cb7e12041a30a2673a9398
